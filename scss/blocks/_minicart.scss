@@ -2,14 +2,20 @@
     position: fixed;
     right: 0;
     width: 405px;
-    max-width: 80%;
     height: 100vh;
-    background-color: #FAF9F6;
+    background-color: $minicart-bg-color;
+    right: -405px;
+    transition: all 0.3s ease;
+}
+
+.minicart--active {
+    right: 0!important;
 }
 
 .mini-cart__wrapper {
     padding: 65px 30px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 100%;;
 }
 
@@ -35,6 +41,16 @@
 
 .minicart-item {
     display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+
+.minicart-item__column {
+    &:last-child {
+        flex: 1;
+    }
 }
 
 .minicart-item__link {
@@ -47,6 +63,7 @@
     width: 95px;
     height: 130px;
     object-fit: cover;
+    border: 1px solid #707070;
 }
 
 .minicart-item__title {
@@ -88,4 +105,83 @@
 
 .footer-minicart__message {
     margin: 20px 0 40px 0!important;
+}
+
+.minicart-qty-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.minicart-qty-form__qty {
+    width: 95px;
+    height: 50px;
+    background: transparent;
+    text-align: center;
+    -webkit-appearance: none;
+    border: 1px solid;
+    font-size: 13px;
+
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.minicart-icon {
+    position: absolute;
+    left: -75px;
+    top: 0;
+    width: 75px;
+    height: 60px;
+    background-color: $minicart-bg-color;
+    text-align: center;
+    padding: 15px 8px;
+    cursor: pointer;
+}
+
+.icon--bag {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    position: absolute;
+    font-size: 13px;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 2px;
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+@include av-mq(thumb) {
+    .minicart-item__link {
+        margin-right: 12px;
+    }
+
+    .minicart-qty-form__qty {
+        width: 65px;
+        height: 35px;
+    }
+
+    .minicart-qty-form__price {
+        font-size: 13px;
+    }
+
+    .mini-cart {
+        width: 285px;
+        right: -285px;
+    }
 }

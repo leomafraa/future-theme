@@ -1,7 +1,11 @@
 <div class="mini-cart">
+    <a class="minicart-icon" aria-label="Minicart">
+        {% render 'icon-bag' %}
+        <span class="cart-count">{{ cart.item_count }}</span>
+    </a>
     <div class="mini-cart__wrapper">
         <div class="minicart__header">
-            <h1 class="minicart__title">Cart</h1>
+            <h1 class="minicart__title">{{ settings.minicart_title }}</h1>
             <span class="minicart__close">{% render 'icon-close' %}</span>
         </div>
         <div class="minicart__content content-minicart">
@@ -20,26 +24,34 @@
                                     {%- unless item.variant.title contains 'Default' -%}
                                         <span class="minicart-item__variant">{{ item.variant.title }}</span>
                                     {%- endunless -%}
+                                    <div class="minicart-item__form minicart-qty-form">
+                                        <input type="number" class="minicart-qty-form__qty" value="{{ item.quantity }}">
+                                        <span class="minicart-qty-form__price">{{ item.price | money_with_currency | remove: "BRL" }}</span>
+                                    </div>
                                 </div>
                             </li>
                             {%- endfor -%}
                     </ul>
                     <div class="content-minicart__footer footer-minicart">
-                        <div class="footer-minicart__notes">
-                            <label for="CartNote">Order Note</label>
-                            <textarea name="note" id="CartNote">{{ cart.note }}</textarea>
-                        </div>
+                        {% if settings.minicart_order_note %}
+                            <div class="footer-minicart__notes">
+                                <label for="CartNote">{{ settings.minicart_order_label }}</label>
+                                <textarea name="note" id="CartNote">{{ cart.note }}</textarea>
+                            </div>
+                        {% endif %}
                         <div class="footer-minicart__subtotal">
-                            <span>Subtotal</span>
-                            <span class="cart-subtotal">$1,300.00</span>
+                            <span>{{ 'minicart.subtotal' | t }}</span>
+                            <span class="cart-subtotal">{{ cart.items_subtotal_price | money_with_currency | remove: "BRL" }}</span>
                         </div>
-                        <p class="footer-minicart__message">Shipping, taxes, and discounts codes calculated at checkout.</p>
-                        <input class="btn" type="submit" name="checkout" value="Checkout">
+                        {% if settings.minicart_message %}
+                            <p class="footer-minicart__message">{{ settings.minicart_message }}</p>
+                        {% endif %}
+                        <input class="btn" type="submit" name="checkout" value="{{ settings.minicart_button }}">
                     </div>
                 </form>
 
             {%- else -%}
-                <p>The cart is empty. <a href="/collections/all">Continue shopping</a></p>
+                <p>{{ 'minicart.empty' | t }} <a href="/collections/all">{{ 'minicart.empty_link' | t }}</a></p>
             {%- endif -%}
         </div>
     </div>

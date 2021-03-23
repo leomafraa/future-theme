@@ -1,0 +1,49 @@
+{
+    "name": {
+      "en": "Minicart"
+    },
+    "settings": [
+      {
+        "type": "header",
+        "content": {
+          "en": "Minicart Content"
+        }
+      },
+      {
+         "type": "color",
+         "id": "minicart_background",
+         "label": "Background Color",
+         "default": "#FAF9F6"
+       },
+      {
+        "type": "text",
+        "id": "minicart_title",
+        "label": "Title",
+        "default": "Cart"
+     },
+     {
+        "type": "checkbox",
+        "id": "minicart_order_note",
+        "label": "Show Order Note?",
+        "default": true
+     },
+     {
+        "type": "text",
+        "id": "minicart_order_label",
+        "label": "Order Notes Label",
+        "default": "Order Note"
+     },
+     {
+        "type": "textarea",
+        "id": "minicart_message",
+        "label": "Custom Message",
+        "default": "Shipping, taxes, and discounts codes calculated at checkout."
+     },
+     {
+        "type": "text",
+        "id": "minicart_button",
+        "label": "Checkout Button Label",
+        "default": "Checkout"
+     }
+    ]
+}
