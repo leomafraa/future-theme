@@ -13,7 +13,7 @@
                 <form action="/cart" method="post">
                     <ul class="minicart-products">
                         {%- for item in cart.items -%}
-                            <li class="minicart-products__item minicart-item">
+                            <li class="minicart-products__item minicart-item" data-id="{{ item.id }}">
                                 <div class="minicart-item__column">
                                     <a class="minicart-item__link" href="{{ item.url | within: collections.all }}">
                                         <img class="minicart-item__image" src="{{ item | img_url: '130x130' }}" alt="{{ item.image.alt | escape }}">

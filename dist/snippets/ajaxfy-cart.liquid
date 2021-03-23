@@ -7,11 +7,13 @@ Shopify.AjaxifyCart = (function($) {
     addingToCartBtnLabel:          'Adding...',
     soldOutBtnLabel:               'Sold Out',
     howLongTillBtnReturnsToNormal: 1000,
-    cartCountSelector:             '.cart-count, #cart-count a:first, #gocart p a, #cart .checkout em, .item-count',
-    cartTotalSelector:             '#cart-price',
+    cartCountSelector:             '.cart-count',
+    cartItemCountSelector:         '.minicart-qty-form__qty',
+    cartTotalSelector:             '.cart-subtotal',
     feedbackPosition:              'nextButton',
     addToCartBtnSelector:          '[type="submit"]',
     addToCartFormSelector:         'form[action="/cart/add"]',
+    minicartSelector:              '.mini-cart',
     shopifyAjaxAddURL:             '/cart/add.js',
     shopifyAjaxCartURL:            '/cart.js'
     };
@@ -71,8 +73,8 @@ Shopify.AjaxifyCart = (function($) {
             // Update cart count and show cart link.
             $.getJSON(_config.shopifyAjaxCartURL, function(cart) {
                 if (_config.cartCountSelector && $(_config.cartCountSelector).length) {
-                var value = $(_config.cartCountSelector).html() || '0';
-                $(_config.cartCountSelector).html(value.replace(/[0-9]+/,cart.item_count)).removeClass('hidden-count');
+                    var value = $(_config.cartCountSelector).html() || '0';
+                    $(_config.cartCountSelector).html(value.replace(/[0-9]+/,cart.item_count)).removeClass('hidden-count');
                 }
                 if (_config.cartTotalSelector && $(_config.cartTotalSelector).length) {
                 if (typeof Currency !== 'undefined' && typeof Currency.moneyFormats !== 'undefined') {
@@ -94,6 +96,7 @@ Shopify.AjaxifyCart = (function($) {
                     $(_config.cartTotalSelector).html(Shopify.formatMoney(cart.total_price, "{{ shop.money_format | remove: "'" | remove: '"' }}"));
                 }
                 };
+                $(_config.minicartSelector).addClass('minicart--active');
             });        
             }, 
             error: function(XMLHttpRequest) {
