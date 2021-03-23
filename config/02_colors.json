@@ -15,7 +15,7 @@
       "label": {
         "en": "Headings and links"
       },
-      "default": "#3a3a3a"
+      "default": "#000000"
     },
     {
       "type": "color",
@@ -23,15 +23,7 @@
       "label": {
         "en": "Body text"
       },
-      "default": "#333232"
-    },
-    {
-      "type": "color",
-      "id": "color_sale_text",
-      "label": {
-        "en": "Sale price"
-      },
-      "default": "#fa4545"
+      "default": "#000000"
     },
     {
       "type": "header",
@@ -45,7 +37,7 @@
       "label": {
         "en": "Primary buttons"
       },
-      "default": "#3a3a3a"
+      "default": "#273E22"
     },
     {
       "type": "color",
@@ -54,14 +46,6 @@
         "en": "Primary labels"
       },
       "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "color_small_button_text_border",
-      "label": {
-        "en": "Secondary labels and borders"
-      },
-      "default": "#3a3a3a"
     },
     {
       "type": "header",
@@ -83,7 +67,7 @@
       "label": {
         "en": "Borders"
       },
-      "default": "#cccccc"
+      "default": "#000000"
     },
     {
       "type": "color",
@@ -91,43 +75,7 @@
       "label": {
         "en": "Background"
       },
-      "default": "rgba(0,0,0,0)"
-    },
-    {
-      "type": "header",
-      "content": {
-        "en": "Image overlays"
-      }
-    },
-    {
-      "type": "color",
-      "id": "color_image_overlay_text",
-      "label": {
-        "en": "Text"
-      },
       "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "color_image_overlay",
-      "label": {
-        "en": "Background"
-      },
-      "default": "#685858"
-    },
-    {
-      "type": "range",
-      "id": "image_overlay_opacity",
-      "label": {
-        "en": "Opacity"
-      },
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": {
-        "en": "%"
-      },
-      "default": 40
     },
     {
       "type": "header",
@@ -141,7 +89,7 @@
       "label": {
         "en": "Borders and lines"
       },
-      "default": "#ebebeb"
+      "default": "#000000"
     },
     {
       "type": "color",
