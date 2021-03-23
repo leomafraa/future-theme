@@ -1,0 +1,59 @@
+{
+  "name": {
+    "en": "Typography"
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": {
+        "en": "Headings and buttons"
+      }
+    },
+    {
+      "type": "font_picker",
+      "id": "type_header_font",
+      "label": {
+        "en": "Font"
+      },
+      "default": "helvetica_n7"
+    },
+    {
+      "type": "range",
+      "id": "type_header_base_size",
+      "label": {
+        "en": "Heading base size"
+      },
+      "default": 26,
+      "min": 20,
+      "max": 36,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": {
+        "en": "Body text"
+      }
+    },
+    {
+      "type": "font_picker",
+      "id": "type_base_font",
+      "label": {
+        "en": "Font"
+      },
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "range",
+      "id": "type_base_size",
+      "label": {
+        "en": "Base size"
+      },
+      "default": 15,
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+}

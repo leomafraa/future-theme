@@ -1,0 +1,155 @@
+{
+  "name": {
+    "en": "Colors"
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": {
+        "en": "Text"
+      }
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": {
+        "en": "Headings and links"
+      },
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "color_body_text",
+      "label": {
+        "en": "Body text"
+      },
+      "default": "#333232"
+    },
+    {
+      "type": "color",
+      "id": "color_sale_text",
+      "label": {
+        "en": "Sale price"
+      },
+      "default": "#fa4545"
+    },
+    {
+      "type": "header",
+      "content": {
+        "en": "Buttons"
+      }
+    },
+    {
+      "type": "color",
+      "id": "color_button",
+      "label": {
+        "en": "Primary buttons"
+      },
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "color",
+      "id": "color_button_text",
+      "label": {
+        "en": "Primary labels"
+      },
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_small_button_text_border",
+      "label": {
+        "en": "Secondary labels and borders"
+      },
+      "default": "#3a3a3a"
+    },
+    {
+      "type": "header",
+      "content": {
+        "en": "Form fields"
+      }
+    },
+    {
+      "type": "color",
+      "id": "color_text_field_text",
+      "label": {
+        "en": "Text"
+      },
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "color_text_field_border",
+      "label": {
+        "en": "Borders"
+      },
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "color_text_field",
+      "label": {
+        "en": "Background"
+      },
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": {
+        "en": "Image overlays"
+      }
+    },
+    {
+      "type": "color",
+      "id": "color_image_overlay_text",
+      "label": {
+        "en": "Text"
+      },
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_image_overlay",
+      "label": {
+        "en": "Background"
+      },
+      "default": "#685858"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "label": {
+        "en": "Opacity"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": {
+        "en": "%"
+      },
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": {
+        "en": "Page"
+      }
+    },
+    {
+      "type": "color",
+      "id": "color_borders",
+      "label": {
+        "en": "Borders and lines"
+      },
+      "default": "#ebebeb"
+    },
+    {
+      "type": "color",
+      "id": "color_body_bg",
+      "label": {
+        "en": "Background"
+      },
+      "default": "#ffffff"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# General files
+
+sass/.sass-cache/*
+node_modules/*
+tmp/*
+.DS_Store
+.idea
+# gulpfile.js
+
+# Avoid committing compiled files
+
+dist/assets/script.js.liquid
+dist/assets/theme.scss.liquid
+dist/config/settings_schema.json
