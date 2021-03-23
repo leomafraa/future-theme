@@ -58,5 +58,10 @@
       "blog_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog.",
       "blog_author": "Author name"
     }
+  },
+  "minicart": {
+    "subtotal": "Subtotal",
+    "empty": "The cart is empty.",
+    "empty_link": "Continue shopping"
   }
 }
