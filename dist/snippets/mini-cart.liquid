@@ -1,0 +1,46 @@
+<div class="mini-cart">
+    <div class="mini-cart__wrapper">
+        <div class="minicart__header">
+            <h1 class="minicart__title">Cart</h1>
+            <span class="minicart__close">{% render 'icon-close' %}</span>
+        </div>
+        <div class="minicart__content content-minicart">
+            {%- if cart.item_count > 0 -%}
+                <form action="/cart" method="post">
+                    <ul class="minicart-products">
+                        {%- for item in cart.items -%}
+                            <li class="minicart-products__item minicart-item">
+                                <div class="minicart-item__column">
+                                    <a class="minicart-item__link" href="{{ item.url | within: collections.all }}">
+                                        <img class="minicart-item__image" src="{{ item | img_url: '130x130' }}" alt="{{ item.image.alt | escape }}">
+                                    </a>
+                                </div>
+                                <div class="minicart-item__column">
+                                    <h2 class="minicart-item__title">{{ item.product.title }}</h2>
+                                    {%- unless item.variant.title contains 'Default' -%}
+                                        <span class="minicart-item__variant">{{ item.variant.title }}</span>
+                                    {%- endunless -%}
+                                </div>
+                            </li>
+                            {%- endfor -%}
+                    </ul>
+                    <div class="content-minicart__footer footer-minicart">
+                        <div class="footer-minicart__notes">
+                            <label for="CartNote">Order Note</label>
+                            <textarea name="note" id="CartNote">{{ cart.note }}</textarea>
+                        </div>
+                        <div class="footer-minicart__subtotal">
+                            <span>Subtotal</span>
+                            <span class="cart-subtotal">$1,300.00</span>
+                        </div>
+                        <p class="footer-minicart__message">Shipping, taxes, and discounts codes calculated at checkout.</p>
+                        <input class="btn" type="submit" name="checkout" value="Checkout">
+                    </div>
+                </form>
+
+            {%- else -%}
+                <p>The cart is empty. <a href="/collections/all">Continue shopping</a></p>
+            {%- endif -%}
+        </div>
+    </div>
+</div>

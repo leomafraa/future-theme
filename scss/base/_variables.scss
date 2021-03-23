@@ -3,4 +3,7 @@
  */
 
 $base-font-family: {{ settings.type_base_font.family }};
-$base-font-size: {{ settings.type_base_size }};
+$base-font-size: {{ settings.type_base_size }}px;
+$body-text-color: {{settings.color_body_text}};
+$btn-bg-color: {{settings.color_button}};
+$btn-text-color: {{settings.color_button_text}};
